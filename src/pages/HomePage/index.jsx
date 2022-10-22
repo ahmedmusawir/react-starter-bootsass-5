@@ -17,7 +17,7 @@ function HomePage() {
               Formik, Context & Reducer, Lodash, Yup, Datepicker and Node-Sass
             </h5>
             <Link to="/add-post" className="btn btn-info float-right">
-              Add New Post
+              <i class="bi bi-palette2 pe-2"></i>Add New Post
             </Link>
           </Content>
         </Col>

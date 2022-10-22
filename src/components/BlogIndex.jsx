@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import { ListGroup, Spinner } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
-import { Row, Col } from 'react-bootstrap';
-import { PostsContext } from '../contexts/PostsContext';
+import React, { useContext } from "react";
+import { ListGroup, Spinner } from "react-bootstrap";
+import { Link } from "react-router-dom";
+import { Row, Col } from "react-bootstrap";
+import { PostsContext } from "../contexts/PostsContext";
 
 function BlogIndex() {
   const { state, dispatch } = useContext(PostsContext);
@@ -10,13 +10,13 @@ function BlogIndex() {
 
   const deleteData = async (id) => {
     await fetch(`${url}${id}`, {
-      method: 'DELETE',
+      method: "DELETE",
     });
   };
 
   const deletePost = (id) => {
     deleteData(id);
-    dispatch({ type: 'REMOVE_POST', payload: id });
+    dispatch({ type: "REMOVE_POST", payload: id });
   };
 
   return (
@@ -38,6 +38,7 @@ function BlogIndex() {
                   className="btn btn-danger"
                   onClick={() => deletePost(post.id)}
                 >
+                  <i class="bi bi-trash-fill pe-2"></i>
                   Delete
                 </button>
               </Col>

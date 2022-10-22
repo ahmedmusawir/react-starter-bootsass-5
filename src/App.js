@@ -4,10 +4,11 @@ import SinglePostPage from "./pages/SinglePostPage";
 import NotFoundPage from "./pages/NotFoundPage";
 import MainNavbar from "./components/general/MainNavbar";
 import PostsContextProvider from "./contexts/PostsContext";
-import "./App.scss";
 import EditPostPage from "./pages/EditPostPage";
 import SamplePage from "./pages/SamplePage";
 import AddPostPage from "./pages/AddPost";
+import "bootstrap-icons/font/bootstrap-icons.css";
+import "./App.scss";
 
 function App() {
   return (
